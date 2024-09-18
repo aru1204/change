@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+</head>
+<body>
+    <h1>Comment Box</h1>
+    <br><br>
+
+    <div id="comment-container">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt unde et error debitis. Quasi totam quis culpa modi distinctio vel sit voluptatum dolore a laboriosam, fugit quam expedita alias laudantium omnis perspiciatis aperiam pariatur? Ut temporibus commodi illo doloribus, in recusandae dolorem officia nobis assumenda accusamus delectus vitae dolor maxime!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt unde et error debitis. Quasi totam quis culpa modi distinctio vel sit voluptatum dolore a laboriosam, fugit quam expedita alias laudantium omnis perspiciatis aperiam pariatur? Ut temporibus commodi illo doloribus, in recusandae dolorem officia nobis assumenda accusamus delectus vitae dolor maxime!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt unde et error debitis. Quasi totam quis culpa modi distinctio vel sit voluptatum dolore a laboriosam, fugit quam expedita alias laudantium omnis perspiciatis aperiam pariatur? Ut temporibus commodi illo doloribus, in recusandae dolorem officia nobis assumenda accusamus delectus vitae dolor maxime!</p>
+    </div>
+    <br><br>
+    <div>
+        <textarea name="" id="text-box" rows="4" cols="100"></textarea>
+        <br><br>
+        <button id="submit-button">Submit Comment</button>
+    </div>
+    <script>
+        document.getElementById('submit-button').addEventListener('click', function (){
+
+            const commentContainer = document.getElementById('comment-container');
+
+            const textBox = document.getElementById('text-box');
+
+            const textBoxText = textBox.value;
+
+            const p = document.createElement('p');
+            p.innerText = textBoxText;
+
+            commentContainer.appendChild(p);
+
+            textBox.value = '';
+
+        })
+    </script>
+</body>
+</html>
