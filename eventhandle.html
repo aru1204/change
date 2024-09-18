@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is ARU Empire</h1>
+    <h2 id="founder">Founded By</h2>
+    <button onclick="seeFounder()">See Founder</button>
+    <button id="foundedIn">Founded In</button>
+
+    <p id="change-founder-name">Change Founder Name As Your Name</p>
+    <input id="input-fild" type="text"> 
+    <br><br>
+    <button id="submit-btn">Submit</button>
+
+
+    <script>
+        document.getElementById('submit-btn').addEventListener('click', function (){
+            const inputFild = document.getElementById('input-fild');
+
+            const inputFildText = inputFild.value;
+
+            const founderName = document.getElementById('founder');
+
+            founder.innerText = inputFildText;
+
+            inputFild.value = '';
+        })
+
+
+        function seeFounder (){
+            const changeFounder = document.getElementById('founder');
+
+            changeFounder.innerText = 'Abidur Rahman Usama';
+        }
+
+        document.getElementById('foundedIn').addEventListener('click', function (){
+            const foundedIn = document.getElementById('founder');
+
+            foundedIn.innerText = '2020';
+        })
+    </script>
+</body>
+</html>
